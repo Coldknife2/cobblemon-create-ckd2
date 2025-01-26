@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "cobblemon-and-create",
+	"version": "${version}",
+	"name": "CobbleMon and Create",
+	"description": "Mod that adds a few blocs that ties Cobblemon and Create",
+	"authors": [
+		"Coldknife2"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cobblemon-and-create/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.coldknife2.CobbleMonAndCreate"
+		],
+		"client": [
+			"com.coldknife2.CobbleMonAndCreateClient"
+		]
+	},
+	"mixins": [
+		"cobblemon-and-create.mixins.json",
+		{
+			"config": "cobblemon-and-create.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"cobblemon": ">=1.5.2"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
